@@ -1,13 +1,13 @@
 const axios = require('axios');
-const { Dog, Temperament } = require('../db.js');
+const { Dog, Temperaments } = require('../db.js');
 
 
 
-// const {API_KEY} = process.env /// api_key=${API_KEY}
+
 //----------------------------Traemos la informacion de la API------------------------------------
 const getApiInfo = async () => {
     try {
-    const api = await axios.get('https://api.thedogapi.com/v1/breeds?');
+    const api = await axios.get('https://api.thedogapi.com/v1/breeds');
         const apiInfo = await api.data.map((el) => {
             return {
                 id: el.id,
@@ -31,7 +31,7 @@ const getDbInfo = async () => {
     try {
         return await Dog.findAll({ 
             include: {
-                model: Temperament,  
+                model: Temperaments,  
                 attributes: ["name"], 
                 through: {
                     attributes: [],
@@ -43,13 +43,13 @@ const getDbInfo = async () => {
     }
 };
 
-//-------------------------------Traemos todos los Dogs---------------------------------
+//-------------------------------Toda la data de la API y de la DB---------------------------------
 
 const getAllDogs = async () => {
     try {
         const apiInfo = await getApiInfo();
         const dbInfo = await getDbInfo();
-        const allInfo = apiInfo.concat(dbInfo);
+        const allInfo = [...apiInfo, ...dbInfo];
         return allInfo;
 
     } catch (error) {
@@ -57,7 +57,7 @@ const getAllDogs = async () => {
     }
 }
 
-//----------------------------------------------------------------
+// //----------------------------------------------------------------
 
 const getTemperamentInfo = async () => {
     try {
@@ -78,7 +78,7 @@ const getTemperamentInfo = async () => {
         })
 
         temps.map(async (el) => {
-            await Temperament.findOrCreate({
+            await Temperaments.findOrCreate({
                 where: { name: el },
             });
         });
