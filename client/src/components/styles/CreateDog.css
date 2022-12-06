@@ -1,0 +1,101 @@
+.container2 {
+    width: 40%;
+    height: auto;
+    margin: 71px auto 72px;
+    border-radius: 30px;
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #fff;
+    background: #5D4C3C;
+    color:#F4E2CB ;
+}
+.labels {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+form {
+    font-weight: 200;
+    font-size: 15px;
+}
+
+input, input:focus {
+    background: #F4E2CB;
+    transition: .3s;
+}
+
+input {
+    border: none;
+    padding: 0.7rem;
+    border-radius: 15px;
+}
+
+
+button:disabled {
+    background: #fff;
+    cursor: default;
+}
+button {
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    color: #090909;
+    padding: 0.5em 1.2em;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background: #a19f90;
+    border: 1px solid #a19f90;
+    transition: all .3s;
+}
+
+button {
+    border-radius: 15px;
+    box-shadow: 4px 8px 19px -3px rgb(0 0 0 / 27%);
+    transition: all .25s;
+    background: #F4E2CB;
+}
+
+select {
+    outline: 0;
+    box-shadow: none;
+    border: 0!important;
+    background: #F4E2CB;
+    background-image: none;
+    padding: 0.6rem;
+    color: #212121;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "Open Sans",sans-serif;
+    border-radius: 15px;
+    line-height: 3;
+    margin-top: 15px;
+}
+
+.ImageBro {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.MinHeight {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.MaxHeight {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.MinWeight {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.maxWeight {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+
+.lifeSpanMen {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.temperamentsMen {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

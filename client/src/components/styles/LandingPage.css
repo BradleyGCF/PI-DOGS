@@ -1,0 +1,116 @@
+.LandingContainer {
+    background-color: #F4E2CB;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+}
+
+.perrito {
+    height: 100vh;
+}
+.contIzq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    text-align: initial;
+}
+
+
+
+.parrafo {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: clamp(1.3rem, 0.5rem + 5vw, 1.3rem);
+    color: #040303;
+}
+
+.titleIndex {
+    font-size: clamp(2.5rem, 1rem + 10vw, 4rem);
+    font-weight: 700;
+    font-family: "Rubik", sans-serif;
+    color: #5D4C3C;
+    margin-bottom: 10%;
+}
+
+
+.btnIntro {
+    cursor: pointer;
+    padding: 15px 25px;
+    border-radius: 15px;
+    color: #5D4C3C;
+    z-index: 1;
+    background: #F4E2CB;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.btnIntro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #5D4C3C;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+.btnIntro:hover {
+    color: #e8e8e8;
+    border: 1px solid #5D4C3C;
+}
+
+.btnIntro:hover::before {
+    width: 100%;
+}
+
+
+.linkedin {
+    max-height: 30px;
+    background-color: #5D4C3C;
+    border-radius: 100%;
+    padding: 8px;
+}
+
+.linkedin:hover {
+    background-color: #5D4C3C;
+}
+
+.github {
+    max-height: 30px;
+    background-color: #5D4C3C;
+    border-radius: 100%;
+    padding: 8px;
+    margin-left: 10px;
+}
+
+.github:hover {
+    background-color: #5D4C3C;
+}
+
+.links {
+    display: flex;
+}
+
+.contDer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8e8e8;
+    box-shadow: 0px 0px 3px 9px rgba(0, 0, 0, 0.1);
+}
+

@@ -1,0 +1,36 @@
+.card-container {
+    
+    width: 300px;
+    overflow: hidden;
+    transition: 0.5s;
+    animation: ease-in-out;
+    box-shadow: 0px 0px 15px 0px;
+    margin-bottom: 20%;
+    border-radius: 20px;
+    border: #5D4C3C;
+}
+
+.card-container:hover {
+    box-shadow: 5px 5px 20px #5D4C3C;
+    transform: translateY(-3%);
+}
+
+
+.name {
+    font-size: large;
+}
+
+.image-container img {
+    overflow: hidden;
+    height: 200px;
+}
+
+
+.btn {
+    border-radius: 50px;
+    border: #5D4C3C;
+    background-color: #5D4C3C;
+    color: #F4E2CB;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+}

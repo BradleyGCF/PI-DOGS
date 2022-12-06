@@ -1,0 +1,120 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.MasterContainer {
+    background-color: #F4E2CB;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: scroll;
+}
+
+
+.MasterContainer .ContainerBotones {
+    display: flex;
+}
+
+#inicio {
+    border-radius: 50px;
+    border: #5D4C3C;
+    background-color: #5D4C3C;
+    color: #F4E2CB;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    margin-right: 0cm;
+}
+
+#create {
+    border-radius: 50px;
+    border: #5D4C3C;
+    background-color: #5D4C3C;
+    color: #F4E2CB;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    position: absolute;
+    left: 5.5%;
+    top: 1%;
+    margin-left: 1cm;
+}
+
+#recargar {
+    border-radius: 50px;
+    border: #5D4C3C;
+    background-color: #5D4C3C;
+    color: #F4E2CB;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    position: absolute;
+    right: 1%;
+    top: 1%;
+}
+
+
+.Select {
+    position: absolute;
+    top: 6%;
+    left: 25%;
+
+}
+
+#tempOption {
+    border-radius: 50px;
+    border: #5D4C3C;
+    background-color: #5D4C3C;
+    color: #F4E2CB;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+}
+
+#filterSelect {
+    border-radius: 50px;
+    border: #5D4C3C;
+    background-color: #5D4C3C;
+    color: #F4E2CB;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    margin-right: 1cm;
+}
+
+#peso {
+    border-radius: 50px;
+    border: #5D4C3C;
+    background-color: #5D4C3C;
+    color: #F4E2CB;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    margin: 1cm;
+}
+
+#order {
+    border-radius: 50px;
+    border: #5D4C3C;
+    background-color: #5D4C3C;
+    color: #F4E2CB;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    margin-left: 1cm;
+}
+
+
+
+.searchbar {
+    position: absolute;
+    left: 44%;
+    top: 1.4%
+}
+
+.cards {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: relative;
+    margin-top: 9%;
+}
