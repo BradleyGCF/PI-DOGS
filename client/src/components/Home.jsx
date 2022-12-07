@@ -160,8 +160,8 @@ const Home = () => {
                     dogs={dogs.length}
                     paginado={paginado}
                 />
-                <button onClick={(e) => handlePrev(e)} disabled={currentPage <= 1}>{"<--"}</button>
-                <button onClick={(e) => handleNext(e)} disabled={currentDogs.length < 8}>{"-->"}</button>
+                <button onClick={(e) => handlePrev(e)} disabled={currentPage <= 1}>{"<<"}</button>
+                <button onClick={(e) => handleNext(e)} disabled={currentDogs.length < 8}>{">>"}</button>
             </div>
         </div>
     )

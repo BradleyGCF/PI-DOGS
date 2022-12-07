@@ -99,7 +99,6 @@ router.post("/", async (req, res) => {
   
 
     await dogCREATED[0].setTemperaments(temperament); 
-    //console.log(dogCREATED[0])
 
     res.status(200).json(dogCREATED);
   } catch (err) {
