@@ -85,7 +85,32 @@ const getTemperamentInfo = async () => {
     } catch (error) {
         console.log("No se encontraron resultados", error);
     }
-
 };
+    //------------------------------------CREATED------------------------------------------
+       const createDog = async (dogData) => {
 
-module.exports = { getApiInfo, getDbInfo, getAllDogs, getTemperamentInfo };
+        const {name, minHeight, maxHeight, minWeight, maxWeight, image, temperament, life_span, createdInDb} = dogData
+    
+        const newDog = await Dog.create({
+            name,
+            minHeight,
+            maxHeight,
+            minWeight,
+            maxWeight,
+            image,
+            temperament,
+            life_span,
+            createdInDb,
+        })
+        const addTypesInDb = await Temperaments.findAll({
+            where: {name: types}
+        })
+    
+        newDog.addTemperaments(addTypesInDb)
+    
+        return newDog
+    }
+
+
+
+module.exports = { getApiInfo, getDbInfo, getAllDogs, getTemperamentInfo, createDog };
