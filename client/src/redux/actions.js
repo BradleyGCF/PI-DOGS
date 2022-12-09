@@ -23,6 +23,7 @@ export const getDogs = () => {
 export const getDogDetail = (id) => {
     return async (dispatch) => {
         let info = await axios.get(`http://localhost:3001/dogs/${id}`);
+        console.log(info);
         dispatch({ type: GET_DOG_DETAIL, payload: info.data });
     }
 }

@@ -26,11 +26,12 @@ const DogDetails = () => {
         <div className="Info-Container">
           <img src={dogInfo[0].image} alt="Dog" width="476px" height="400px"/>
           <h2 className="name">{dogInfo[0].name}</h2>                 
-          <h3 className="alturapa">Height: {dogInfo[0].height} cm</h3>               
-          <h4 className="pesopa">Weight: {dogInfo[0].weight} kg</h4>               
+          <h3 className="alturapa">Height: {dogInfo[0].height?dogInfo[0].height: `${dogInfo[0].minHeight} - ${dogInfo[0].maxHeight}`} cm</h3>               
+          <h4 className="pesopa">Weight: {dogInfo[0].weight?dogInfo[0].weight: `${dogInfo[0].minWeight} - ${dogInfo[0].maxWeight}`} kg</h4>               
           <h4 className="lifespanpa">LifeSpan: {dogInfo[0].createdDB ? dogInfo[0].life_span + " years" : dogInfo[0].life_span}</h4>  
           <h5 className="temperamentspa">{!dogInfo[0].createdDB ? dogInfo[0].temperament : dogInfo[0].temperaments.map((el) => el.name + (", "))}</h5>
         </div>
+        
       )}
     </div>
   );

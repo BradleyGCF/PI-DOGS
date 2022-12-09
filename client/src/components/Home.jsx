@@ -83,13 +83,13 @@ const Home = () => {
         <div className='MasterContainer'>
             <div className='ContainerBotones'>
                 <Link to='/' >
-                    <button id='inicio'>Inicio</button>
+                    <button id='inicio'>Back</button>
                 </Link>
 
                 <Link to='/creation' >
                     <button id='create'>Create Dog</button>
                 </Link>
-                <button onClick={(e) => handleClick(e)} id='recargar'>Recargar</button>
+                <button onClick={(e) => handleClick(e)} id='recargar'>Reload</button>
             </div>
 
 
@@ -106,8 +106,8 @@ const Home = () => {
                 {/* filtrado por peso */}
                 <select onChange={(event) => handleOrderByWeight(event)} id='peso'>
                     <option value='Weight'>Weight Order</option>
-                    <option value='Light'>Mayor Peso</option>
-                    <option value='Heavy'>Menor Peso</option>
+                    <option value='Light'>Max Wight</option>
+                    <option value='Heavy'>Min width</option>
                 </select>
 
 

@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import './styles/DogCards.css';
 
 
-const DogCards = ({ id, name, image, temperaments, temperament, weight, createdDB, height }) => {
-    return (
-
+const DogCards = ({ id, name, image, temperaments, temperament, weight, createdInDb, height }) => {
+   console.log(weight,height); return (
+    
+ 
         <div className="card-container">
             <div>
                 <h2 className="name">{name}</h2>
@@ -14,7 +15,7 @@ const DogCards = ({ id, name, image, temperaments, temperament, weight, createdD
                 <img src={image} alt="Dog" />
             </div>
             <div className="card-content">
-                <h4 className="temperaments">{createdDB ? temperaments.map((e) => e.name).join(", ") : temperament}</h4>
+                <h4 className="temperaments">{createdInDb ? temperaments.map((e) => e.name).join(", ") : temperament}</h4>
                 <h5 className="heightAndWeight ">Weight: {weight} kg</h5>
                 <h5 className="heightAndWeight">Height: {height} cm</h5>
                 <Link to={`/home/${id}`}>
@@ -25,9 +26,5 @@ const DogCards = ({ id, name, image, temperaments, temperament, weight, createdD
     )
 }
 
-// Imagen
-// Nombre
-// Temperamento
-// Peso
 
 export default DogCards;

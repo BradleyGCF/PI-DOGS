@@ -59,7 +59,6 @@ const CreateDog = () => {
 
     const [errors, setErrors] = useState({}); // estados locales para los errores
 
-
     const handleChange = (event) => {
         setInput({
             ...input,
