@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+axios.defaults.baseURL = 'http://localhost:3001';
 
 export const GET_DOGS = 'GET_DOGS';
 export const GET_DOG_DETAIL = 'GET_DOG_DETAIL';
@@ -15,14 +15,14 @@ export const SEARCH_BREED_NAME = 'SEARCH_BREED_NAME' ;
 
 export const getDogs = () => {
     return async (dispatch) => {
-        let info = await axios.get('http://localhost:3001/dogs');
+        let info = await axios.get('/dogs');
         dispatch({ type: GET_DOGS, payload: info.data });
     }
 }
 
 export const getDogDetail = (id) => {
     return async (dispatch) => {
-        let info = await axios.get(`http://localhost:3001/dogs/${id}`);
+        let info = await axios.get(`/dogs/${id}`);
         console.log(info);
         dispatch({ type: GET_DOG_DETAIL, payload: info.data });
     }
@@ -30,7 +30,7 @@ export const getDogDetail = (id) => {
 
 export const getTemperaments = () => {
     return async (dispatch) => {
-        let info = await axios.get('http://localhost:3001/temperaments');
+        let info = await axios.get('/temperaments');
         dispatch({ type: GET_TEMPERAMENTS, payload: info.data });
     }
 }
@@ -38,7 +38,7 @@ export const getTemperaments = () => {
 
 export const createDog = (payload) => {
     return async () => {
-        let info = await axios.post('http://localhost:3001/dogs', payload);
+        let info = await axios.post('/dogs', payload);
         return info;
     }
 }
@@ -47,7 +47,7 @@ export const createDog = (payload) => {
 export const searchBreedName = (payload) => {
     return async (dispatch) => {
         try {
-            let info = await axios.get(`http://localhost:3001/dogs?name=${payload}`);
+            let info = await axios.get(`/dogs?name=${payload}`);
             return dispatch({ type: 'SEARCH_BREED_NAME', payload: info.data })
         } catch (error) {
             console.log('error en funcion searchBreedName', error);
